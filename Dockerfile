@@ -13,8 +13,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copiar el código de la aplicación
 COPY . .
 
-# Railway asigna el puerto dinámicamente
-EXPOSE $PORT
+# Render usa el puerto 10000 por defecto
+EXPOSE 10000
 
 # Ejecutar la aplicación Flask
 CMD ["python", "app.py"]

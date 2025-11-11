@@ -98,37 +98,34 @@ Ejecutar las pruebas unitarias:
 python -m pytest test_calculator.py
 ```
 
-## 🚀 Despliegue en Railway
+## 🚀 Despliegue en Render (Gratuito)
 
 ### Opción 1: Deploy desde GitHub (Recomendado)
-1. Sube tu código a un repositorio de GitHub
-2. Ve a [Railway.app](https://railway.app)
-3. Conecta tu cuenta de GitHub
-4. Selecciona "Deploy from GitHub repo"
-5. Elige tu repositorio
-6. Railway detectará automáticamente el Dockerfile
-7. ¡Tu app estará desplegada en minutos!
+1. Ve a [Render.com](https://render.com)
+2. Crea una cuenta gratuita
+3. Haz clic en "New +" → "Web Service"
+4. Conecta tu repositorio de GitHub: `Alisson714/AlissonVelez5toB`
+5. Selecciona la rama `alisson`
+6. Render detectará automáticamente tu Dockerfile
+7. Configura:
+   - **Name:** calculadora-alisson
+   - **Environment:** Docker
+   - **Plan:** Free
+8. ¡Deploy automático!
 
-### Opción 2: Deploy con Railway CLI
-```bash
-# Instalar Railway CLI
-npm install -g @railway/cli
-
-# Login a Railway
-railway login
-
-# Inicializar proyecto
-railway init
-
-# Deploy
-railway up
-```
-
-### Configuración Railway
-- **Puerto:** Dinámico (Railway asigna automáticamente)
+### Opción 2: Deploy con render.yaml
+Tu proyecto incluye `render.yaml` para configuración automática:
+- **Puerto:** 10000 (estándar de Render)
 - **Build:** Dockerfile
 - **Start Command:** `python app.py`
 - **Health Check:** Configurado en `/`
+- **Auto Deploy:** Habilitado
+
+### Configuración Render
+- **Plan gratuito:** Ilimitado
+- **Sleep:** Después de 15 min de inactividad
+- **SSL:** Gratuito y automático
+- **Dominio:** `tu-app.onrender.com`
 
 ## 🐳 Docker Local
 
